@@ -1,5 +1,6 @@
 import React from 'react';
 import { Play, Camera, Zap } from 'lucide-react';
+import blackCircle from '../black_circle_360x360.png';
 
 interface StartMenuProps {
   onStart: () => void;
@@ -10,6 +11,13 @@ interface StartMenuProps {
 export const StartMenu: React.FC<StartMenuProps> = ({ onStart, isHandTrackerReady, handTrackerError }) => {
   return (
     <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-black flex flex-col items-center justify-center">
+      {/* Black circle logo */}
+      <img 
+        src={blackCircle} 
+        alt="Logo" 
+        className="absolute top-4 right-4 w-16 h-16 z-20"
+      />
+
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-20 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-xl animate-pulse"></div>
